@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-logo">
+        <a href="#">
+            <img src="../img/verde-removebg.png" alt="Logo">
+        </a>
+    </div>
+    <ul class="navbar-menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre mí</a></li>
+        <li>
+            <a href="#">Proyectos</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Proyecto 1</a></li>
+                <li><a href="#">Proyecto 2</a></li>
+                <li><a href="#">Proyecto 2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+</nav>
+<main>
+
+  <section class="contenedor-formulario">
+    <h2 id="titulo-contacto">Contacto</h2>
+    <div id="formulario">
+      <div id="zona-izq">
+        <h3>Información de Contacto</h3>
+        <div class="numero">
+          <img src="" alt="logo-telefono">
+          <p>+34 642 687 147</p>
+        </div>
+        <div class="correo">
+          <img src="" alt="logo-correo">
+          <p>oscarse150802@gmail.com</p>
+        </div>
+        <div class="ubicacion">
+          <img src="" alt="logo-ubicacion">
+          <p>Madrid, España</p>
+        </div>
+      </div>
+      <form id="zona-der">
+        <div id="primera-columna">
+          <div class="apartado-formulario">
+            <label for="">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Oscar" required>
+          </div>
+          <div class="apartado-formulario">
+            <label for="">Apellidos</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Pillaca Díaz" required>
+          </div>
+        </div>
+        <div id="segunda-columna">
+          <div class="apartado-formulario">
+            <label for="">Correo</label>
+            <input type="text" name="nombre" id="nombre" placeholder="ejemplo@gmail.com" required>
+          </div>
+          <div class="apartado-formulario">
+            <label for="">Teléfono</label>
+            <input type="text" name="nombre" id="nombre" placeholder="+ 34 547 547 888" required>
+          </div>
+        </div>
+        <div id="tercera-columna">
+          <div class="apartado-formulario">
+            <label for="">Mensaje</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Oscar" required>
+          </div>
+        </div>
+        <div>
+          <button id="boton-form">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+</body>
+</html>

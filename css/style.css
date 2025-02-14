@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8d8d8d;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar-logo img {
+    height: 110px;
+    width: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    position: relative;
+}
+
+.navbar-menu a {
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar-menu a:hover {
+    background-color: #434141;
+    border-radius: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #434141;
+    border-radius: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 2px solid white;
+}
+
+.navbar-menu li:hover .dropdown-menu {
+    display: block;
+    background-color: #8d8d8d;
+}
+
+/*FIN DEL NAVBAR*/
+
+/*FORMULARIO DE CONTACTO*/
+
+#formulario{
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+}
+
+#titulo-contacto{
+    text-align: center;
+    color: black;
+}
+
+#zona-izq{
+    padding: 25px;
+    background-color: #133941;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#zona-der{
+    padding: 40px 40px;
+    background-color: #358c9d;
+}
+
+.apartado-formulario{
+    padding: 10px;
+}
+
+.apartado-formulario input{
+    color: #f5f5f5;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid #000;
+    outline: none;/*le quite el borde que se ponia al darle click, no es recomendable por lo que vi, pero se ve mejor asi(segun yo)*/
+}
+
+input::placeholder{
+    color: #434141;/*con esto le cambiamos el fondo al placeholder*/
+}
+
+#primera-columna, #segunda-columna, #tercera-columna{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.apartado-formulario{
+    flex-direction: column;
+}
+
+
+#boton-form{
+    background-color: #133941;
+    border-style: none;
+    padding: 10px 25px 10px 25px;
+    color: #f5f5f5;
+    border-radius: 5px;
+}
+
+#boton-form:hover{
+    background-color: #10505f;
+}
