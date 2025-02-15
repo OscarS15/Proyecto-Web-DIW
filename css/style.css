@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #beb7b7;
 }
 
 .navbar {
@@ -10,6 +11,8 @@ body {
     background-color: #8d8d8d;
     padding: 10px 20px;
     height: 60px;
+    position: sticky;/*para que quede fijo*/
+    top: 0;/*tambien para que quede fijo*/
 }
 
 .navbar-logo img {
@@ -65,7 +68,200 @@ body {
 
 /*FIN DEL NAVBAR*/
 
+/*INICIO - TARJETA DE PRESENTACION / PEQUEÑO RESUMEN*/
+
+.contenedor-inicio{
+    display: flex;
+    padding: 25px;
+    margin: 10px;
+}
+
+.tarjeta{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin-left: 15em;/*VERIFICAR*/
+    text-align: center;
+    border-radius: 10px;
+}
+.titulo{
+    color: gray;
+    font-size: 18px;
+}
+
+#boton-container{
+    margin-top: auto;
+}
+
+#contacto-tarjeta{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: #f5f5f5;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+#foto-tarjeta{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+#logo-tarjeta{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+#contacto-tarjeta:hover{
+    opacity: 0.7;
+}
+
+.texto-inicio{
+    padding: 35px;
+    max-width: 450px;
+}
+
+/*FIN DE INICIO - TARJETA DE PRESENTACION / PEQUEÑO RESUMEN*/
+
+/*SOBRE MI*/
+.barras{
+    padding: 20px;
+}
+
+.container {
+    width: 98%;
+    background-color: #ffffff; /* Grey background */
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
+
+#img-barra{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+.skills {
+    text-align: right; 
+    color: white; /* White text color */
+    max-height: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.css {
+    width: 70%; 
+    background-color: #2196F3;
+    padding: 2px;
+} 
+.css-no{
+    width: 18%;
+    background-color: #9899a0;
+    color: #9899a0;
+    padding: 2px;
+    border-radius: 0 10px 10px 0;
+} 
+.js {
+    width: 65%; 
+    background-color: #ffdf00;
+    color: black;
+    padding: 2px;
+} 
+
+.js-no{
+    width: 23%;
+    background-color: #9899a0;
+    color: #9899a0;
+    padding: 2px;
+    border-radius: 0 10px 10px 0;
+} 
+
+.php {
+    width: 61%; 
+    background-color: #777bb3;
+    padding: 2px;
+}
+
+.php-no{
+    width: 26%;
+    background-color: #9899a0;
+    color: #9899a0;
+    padding: 2px;
+    border-radius: 0 10px 10px 0;
+} 
+
+.mysql {
+    width: 66%; 
+    background-color: #00758f;
+    padding: 2px;
+} 
+
+.mysql-no{
+    width: 20%;
+    background-color: #9899a0;
+    color: #9899a0;
+    padding: 2px;
+    border-radius: 0 10px 10px 0;
+} 
+
+/*FIN SOBRE MI*/
+
+/*PROYECTOS REALIZADOS*/
+
+#titulo-proyectos{
+    text-align: center;
+    padding: 20px;
+}
+
+.proyecto{
+    display: flex;
+    
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagen-proyecto img{
+    width: auto;
+    height: 220px;
+    border-radius: 10px;
+}
+
+#imagen{
+    transition: transform 0.3s ease-in-out;
+}
+
+#imagen:hover{
+    transform: scale(1.1);
+}
+
+.contenido-proyecto{
+    max-width: 950px;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.spotify{
+    background-color: #1DB954;
+    border-radius: 15px;
+    padding: 7px;
+}
+
+
+/*FIN DEPROYECTOS REALIZADOD*/
+
 /*FORMULARIO DE CONTACTO*/
+
+.contenedor-formulario{
+    padding-top: 20px;
+}
 
 #formulario{
     color: #f5f5f5;
@@ -95,6 +291,7 @@ body {
 
 .apartado-formulario{
     padding: 10px;
+    flex-direction: column;
 }
 
 .apartado-formulario input{
@@ -115,11 +312,6 @@ input::placeholder{
     padding: 15px;
 }
 
-.apartado-formulario{
-    flex-direction: column;
-}
-
-
 #boton-form{
     background-color: #133941;
     border-style: none;
@@ -130,4 +322,54 @@ input::placeholder{
 
 #boton-form:hover{
     background-color: #10505f;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+}
+/*FIN FOOTER*/
+
+/*EXTRA - BOTON*/
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
