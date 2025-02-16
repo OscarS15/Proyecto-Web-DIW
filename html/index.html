@@ -6,47 +6,68 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../img/byn.png" type="image/x-icon">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+  </head>
 <body>
 <nav class="navbar">
     <div class="navbar-logo">
-        <a href="#">
+        <a href="#ir-inicio">
             <img src="../img/verde-removebg.png" alt="Logo">
         </a>
     </div>
+    <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
     <ul class="navbar-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre mí</a></li>
+        <li><a href="#ir-inicio">Inicio</a></li>
+        <li><a href="#ir-sobremi">Sobre mí</a></li>
         <li>
-            <a href="#">Proyectos</a>
+            <a href="#ir-proyectos">Proyectos</a>
             <ul class="dropdown-menu">
-                <li><a href="#">Proyecto 1</a></li>
-                <li><a href="#">Proyecto 2</a></li>
-                <li><a href="#">Proyecto 2</a></li>
+                <li><a href="#proyecto1">Proyecto 1</a></li>
+                <li><a href="#proyecto2">Proyecto 2</a></li>
+                <li><a href="#proyecto3">Proyecto 2</a></li>
             </ul>
         </li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#ir-formulario">Contacto</a></li>
     </ul>
 </nav>
 <main>
-<section class="contenedor-inicio">
+<section class="contenedor-inicio" id="ir-inicio">
   <div class="tarjeta">
     <img src="../img/rigby.jpg" alt="Oscar" id="foto-tarjeta">
     <h1>Oscar Pillaca</h1>
     <p class="titulo">Desarrollador Web | Diseño & Tecnología</p>
     <p>IES Villablanca</p>
-    <a  href="#"><img  id="logo-tarjeta"src="../img/instagram.png" alt="logo-ig"></a>
-    <a href="#"><img id="logo-tarjeta" src="../img/twitter.png" alt="logo-x"></a>
-    <a  href="#"><img id="logo-tarjeta" src="../img/email.png" alt="logo-gmail"></a>
-    <a  href="#"><img id="logo-tarjeta" src="../img/linkedin.png" alt="logo-linkedin"></a>
-    <p id="boton-container"><button id="contacto-tarjeta">Contacto</button></p>
+    <a  href="https://www.instagram.com"><img  id="logo-tarjeta"src="../img/instagram.png" alt="logo-ig"></a>
+    <a href="https://www.x.com"><img id="logo-tarjeta" src="../img/twitter.png" alt="logo-x"></a>
+    <a  href="https://www.gmail.com"><img id="logo-tarjeta" src="../img/email.png" alt="logo-gmail"></a>
+    <a  href="https://www.linkedin.com"><img id="logo-tarjeta" src="../img/linkedin.png" alt="logo-linkedin"></a>
+    <p id="boton-container"><button id="contacto-tarjeta"  onclick="window.location.href='#ir-formulario'">Contacto</button></p>
   </div>
-  <div class="texto-inicio">
-    <p>Trabajo con tecnologías modernas, para construir soluciones web interactivas y fáciles de usar.</p>
-    <p><a href="">Ver mis proyectos</a></p>
+  <div class="texto-inicio" id="maquina">
+    <p id="texto">Trabajo con tecnologías modernas, para construir soluciones web interactivas y fáciles de usar.</p>
+    <p><a href="#ir-proyectos">Ver mis proyectos...</a></p>
   </div>
 </section>
-<section class="contenedor-sobremi">
+<section class="contenedor-sobremi" id="ir-sobremi">
+  <h3 id="titulo-sobremi">Sobre mí</h3>
+<div class="quien-soy">
+  <p>Soy Oscar Sebastian Pillaca Díaz, un estudiante y profesional apasionado por el desarrollo web y la programación con un enfoque tanto en Front-End como en Back-End.</p>
+    <ul>
+      <div>Mis estudios:</div>
+      <li> - Curso introducción al Front-End - Fundación Tomillo</li>
+      <li> - Grado Superior en Desarrollo de Aplicaciones Web - IES Villablanca</li>
+    </ul>
+
+</div>
+<div class="mas-de-mi">
+  <p>Desde que empecé a aprender sobre la programación, he experimentado un viaje lleno de desafíos,
+    aprendizaje constante y creatividad. Empecé con un curso muy corte para adentrarme a este mundo, lo que
+    me impulsó a seguir aprendiendo. Hoy en día, estoy enfocado en crear experencias digitales que sean tanto 
+    funcionales como atractivas visualmente. <br><br>
+    Mis conocimientos son los siguientes:</p>
+</div>
   <div class="barras">
 <p>CSS</p>
 <div class="container">
@@ -74,40 +95,38 @@
 </div>
   </div>
 </section>
-<section class="contenedor-proyectos">
+<section class="contenedor-proyectos" id="ir-proyectos">
   <h2 id="titulo-proyectos">Proyectos</h2>
-  <div class="proyecto">
+  <div class="proyecto" id="proyecto1">
     <div class="imagen-proyecto">
       <img src="../img/spotify.png" alt="proyecto1" id="imagen">
     </div>
     <div class="contenido-proyecto spotify">
-      <h3>Spotify</h3>
+      <h3 class="titulo-proyectos">Spotify</h3>
       <p>He participado en el desarrollo y mejora de diversas funcionalidades en Spotify, contribuyendo a la optimización de la experiencia del usuario y la eficiencia del sistema. Mis contribuciones:</p>
       <ul>
         <li>Implementación de mejoras en la interfaz web, asegurando un diseño más intuitivo y responsivo.</li>
-        <li>Optimización del rendimiento en la carga de contenido dinámico.</li>
-        <li>Colaboración con equipos de backend y frontend para integrar nuevas tecnologías.</li>
-      </ul>
+        <li>Optimización del rendimiento en la carga de contenido dinámico.</li>      </ul>
     </div>
   </div>
 
-  <div class="proyecto reverse">
+  <div class="proyecto reverse" id="proyecto2">
     <div class="imagen-proyecto">
       <img src="../img/openwebinars.png" alt="proyecto2" id="imagen">
     </div>
-    <div class="contenido-proyecto">
-      <h3>Proyecto número 2</h3>
-      <p>Este es un ejemplo</p>
+    <div class="contenido-proyecto openwebinars">
+      <h3 class="titulo-proyectos">Web de OpenWebinars</h3>
+      <p>He formado parte del desarrollo de la página de OpenWebinars, contribuyendo a la implementación de nuevas funcionalidades y optimización del sitio. Mi trabajo se ha centrado en mejorar la experiencia de usuario, garantizar un diseño responsive y optimizar el rendimiento de la plataforma.</p>
     </div>
   </div>
 
-  <div class="proyecto">
+  <div class="proyecto" id="proyecto3">
     <div class="imagen-proyecto">
       <img src="../img/x.png" alt="proyecto1" id="imagen">
     </div>
-    <div class="contenido-proyecto">
-      <h3>Proyecto número 1</h3>
-      <p>Este es un ejemplo</p>
+    <div class="contenido-proyecto twitter">
+      <h3 class="titulo-proyectos">X (Twitter)</h3>
+      <p>He tenido la oportunidad de colaborar en el mantenimiento y mejora de la plataforma X (anteriormente conocida como Twitter), donde he aplicado mis habilidades como programador para optimizar diversas funciones y procesos dentro del sistema. Mi enfoque ha sido garantizar un rendimiento fluido y seguro, trabajando con tecnologías actuales y adaptándome a los desafíos técnicos para mejorar la experiencia de los usuarios. Esta experiencia me ha permitido crecer tanto a nivel técnico como en mi capacidad para colaborar en un entorno dinámico y de alto rendimiento.</p>
     </div>
   </div>
 
@@ -115,30 +134,30 @@
     <div class="imagen-proyecto">
       <img src="../img/youtube.png" alt="proyecto2" id="imagen">
     </div>
-    <div class="contenido-proyecto">
-      <h3>Proyecto número 2</h3>
-      <p>Este es un ejemplo</p>
+    <div class="contenido-proyecto youtube">
+      <h3 class="titulo-proyectos">Youtube</h3>
+      <p>He trabajado en la optimización y mantenimiento de YouTube, aportando mis conocimientos en programación para mejorar su funcionamiento. Mi labor ha incluido la optimización del código, la detección y corrección de errores, así como la mejora del rendimiento general de la plataforma. Gracias a esta experiencia, he podido profundizar en el desarrollo de sistemas escalables y en la implementación de soluciones eficientes para una plataforma de alto tráfico.</p>
     </div>
   </div>
 
 
 </section>
 
-  <section class="contenedor-formulario">
+  <section class="contenedor-formulario" id="ir-formulario">
     <h2 id="titulo-contacto">Contacto</h2>
     <div id="formulario">
       <div id="zona-izq">
-        <h3>Información de Contacto</h3>
+        <h3 class="titulo-proyectos">Información de Contacto</h3>
         <div class="numero">
-          <img src="" alt="logo-telefono">
+          <img src="../img/telefono.png" alt="logo-telefono" id="logo-form">
           <p>+34 642 687 147</p>
         </div>
         <div class="correo">
-          <img src="" alt="logo-correo">
+          <img src="../img/email.png" alt="logo-correo" id="logo-form">
           <p>oscarse150802@gmail.com</p>
         </div>
         <div class="ubicacion">
-          <img src="" alt="logo-ubicacion">
+          <img src="../img/ubicacion.png" alt="logo-ubicacion" id="logo-form">
           <p>Madrid, España</p>
         </div>
       </div>
@@ -150,23 +169,23 @@
           </div>
           <div class="apartado-formulario">
             <label for="">Apellidos</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Pillaca Díaz" required>
+            <input type="text" name="nombre" id="apellidos" placeholder="Pillaca Díaz" required>
           </div>
         </div>
         <div id="segunda-columna">
           <div class="apartado-formulario">
             <label for="">Correo</label>
-            <input type="text" name="nombre" id="nombre" placeholder="ejemplo@gmail.com" required>
+            <input type="text" name="nombre" id="correo" placeholder="ejemplo@gmail.com" required>
           </div>
           <div class="apartado-formulario">
             <label for="">Teléfono</label>
-            <input type="text" name="nombre" id="nombre" placeholder="+ 34 547 547 888" required>
+            <input type="text" name="nombre" id="telefono" placeholder="+ 34 547 547 888" required>
           </div>
         </div>
         <div id="tercera-columna">
           <div class="apartado-formulario">
             <label for="">Mensaje</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Oscar" required>
+            <input type="text" name="nombre" id="mensaje" placeholder="Oscar" required>
           </div>
         </div>
         <div>
@@ -181,13 +200,13 @@
   <div class="footer-content">
     <p>&copy; Copyright 2025 OsDev. Todos los derechos reservados.</p>
     <div class="social-icons">
-      <a href="https://www.instagram.com/tuusuario" target="_blank">
+      <a href="https://www.instagram.com" target="_blank">
         <img src="../img/linkedin.png" alt="Instagram">
       </a>
-      <a href="https://www.twitter.com/tuusuario" target="_blank">
+      <a href="https://www.twitter.com" target="_blank">
         <img src="../img/twitter.png" alt="Twitter">
       </a>
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank">
+      <a href="https://www.linkedin.com" target="_blank">
         <img src="../img/instagram.png" alt="LinkedIn">
       </a>
     </div>

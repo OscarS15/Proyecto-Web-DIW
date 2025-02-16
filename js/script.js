@@ -1,19 +1,41 @@
-// Get the button:
-let mybutton = document.getElementById("myBtn");
+// Botón "Subir"
+const myButton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+    } else {
+        myButton.style.display = "none";
+    }
+};
 
-function scrollFunction() {
-if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-} else {
-    mybutton.style.display = "none";
+function scrollToTop() {
+    document.body.scrollTop = 0; // Para Safari
+    document.documentElement.scrollTop = 0; // Para otros navegadores
 }
+
+// Efecto de máquina de escribir
+const textElement = document.getElementById("texto");
+const text = textElement.innerHTML;
+textElement.innerHTML = "";
+
+let i = 0;
+const speed = 50;
+
+function typeWriter() {
+    if (i < text.length) {
+        textElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    } else {
+        textElement.style.borderRight = "none";
+    }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+typeWriter();
+
+// Menú hamburguesa
+function toggleMenu() {
+    const menu = document.querySelector('.navbar-menu');
+    menu.classList.toggle('active');
 }

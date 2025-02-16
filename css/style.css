@@ -1,7 +1,10 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #beb7b7;
+    background-color: #a4b3bd;
+    font-family: "Lilita One", serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -79,17 +82,15 @@ body {
 .tarjeta{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    margin-left: 15em;/*VERIFICAR*/
+    margin-left: 19em;/*VERIFICAR*/
     text-align: center;
     border-radius: 10px;
+    height: 100%;
+    flex-direction: column;
 }
 .titulo{
-    color: gray;
+    color: #f5f5f5;
     font-size: 18px;
-}
-
-#boton-container{
-    margin-top: auto;
 }
 
 #contacto-tarjeta{
@@ -103,6 +104,7 @@ body {
     cursor: pointer;
     width: 100%;
     font-size: 18px;
+    border-radius: 75%;
 }
 
 #foto-tarjeta{
@@ -123,11 +125,77 @@ body {
 .texto-inicio{
     padding: 35px;
     max-width: 450px;
+    white-space: pre-wrap; /* Mantiene los saltos de línea y espacios */
+    overflow: hidden; /* Oculta el texto que aún no se muestra */
+    display: inline-block; /* Para que el borde solo ocupe el ancho del texto */
 }
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
+.texto-inicio a{
+    text-decoration: none;
+    color: #10505f;
+}
+
+.texto-inicio a:hover{
+    color: #ffffff;
+}
+
+.texto-inicio p{
+    font-size: 2em;
+}
+
 
 /*FIN DE INICIO - TARJETA DE PRESENTACION / PEQUEÑO RESUMEN*/
 
 /*SOBRE MI*/
+.contenedor-sobremi{
+    font-family: "Carter One", serif;
+}
+
+#titulo-sobremi{
+    text-align: center;
+    padding-top: 60px;
+    color: #f5f5f5;
+}
+
+.quien-soy{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+.quien-soy div{
+    text-decoration: underline;
+}
+
+.mas-de-mi{
+    justify-content: center;
+    padding: 20px;
+}
+
+.quien-soy ul{
+    background-color: #00758f;
+    color: #f5f5f5;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    list-style: none;
+}
+
+.quien-soy p,
+.mas-de-mi p {
+    background-color: #00758f;
+    color: #f5f5f5;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
 .barras{
     padding: 20px;
 }
@@ -164,7 +232,6 @@ body {
     width: 18%;
     background-color: #9899a0;
     color: #9899a0;
-    padding: 2px;
     border-radius: 0 10px 10px 0;
 } 
 .js {
@@ -178,7 +245,6 @@ body {
     width: 23%;
     background-color: #9899a0;
     color: #9899a0;
-    padding: 2px;
     border-radius: 0 10px 10px 0;
 } 
 
@@ -192,7 +258,6 @@ body {
     width: 26%;
     background-color: #9899a0;
     color: #9899a0;
-    padding: 2px;
     border-radius: 0 10px 10px 0;
 } 
 
@@ -206,7 +271,6 @@ body {
     width: 20%;
     background-color: #9899a0;
     color: #9899a0;
-    padding: 2px;
     border-radius: 0 10px 10px 0;
 } 
 
@@ -214,9 +278,18 @@ body {
 
 /*PROYECTOS REALIZADOS*/
 
+.contenedor-proyectos{
+    font-family: "Karla", serif;
+    font-weight: 500;
+}
+
 #titulo-proyectos{
     text-align: center;
     padding: 20px;
+}
+
+.titulo-proyectos{
+    text-decoration: underline;
 }
 
 .proyecto{
@@ -254,13 +327,34 @@ body {
     padding: 7px;
 }
 
+.openwebinars{
+    background-color: #0080e9;
+    border-radius: 15px;
+    padding: 7px;
+    color: #f5f5f5;
+}
+
+.twitter{
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 7px;
+    color: #f5f5f5;
+}
+
+.youtube{
+    background-color: #cb2821e9;
+    border-radius: 15px;
+    padding: 7px;
+}
+
 
 /*FIN DEPROYECTOS REALIZADOD*/
 
 /*FORMULARIO DE CONTACTO*/
 
 .contenedor-formulario{
-    padding-top: 20px;
+    padding: 25px;
+    font-family: "Sen", serif;
 }
 
 #formulario{
@@ -270,6 +364,7 @@ body {
     align-items: center;
     padding: 15px;
     margin: 20px;
+    align-items: stretch;
 }
 
 #titulo-contacto{
@@ -284,9 +379,21 @@ body {
     border-bottom-left-radius: 12px;
 }
 
+#logo-form{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /*CAMBIAMOS LOS LOGOS DE NEGRO A BLANCO*/
+}
+
 #zona-der{
     padding: 40px 40px;
     background-color: #358c9d;
+
+}
+
+#zona-der input{
+    padding-top: 15px;
+    display: block;
 }
 
 .apartado-formulario{
@@ -318,6 +425,7 @@ input::placeholder{
     padding: 10px 25px 10px 25px;
     color: #f5f5f5;
     border-radius: 5px;
+    float: right;
 }
 
 #boton-form:hover{
@@ -326,7 +434,7 @@ input::placeholder{
 
 /*FOOTER*/
 footer {
-    background-color: #333;
+    background-color: #8d8d8d;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -355,21 +463,178 @@ footer {
 /*EXTRA - BOTON*/
 
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: red; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #10505f; 
+    color: white; 
+    cursor: pointer;
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
 }
 
 #myBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #555; 
+}
+
+.navbar-toggle {
+    display: none; /* Oculta el botón en pantallas grandes */
+    cursor: pointer;
+    font-size: 24px;
+    color: #f5f5f5;
+}
+
+/* RESPONSIVE??????*/
+@media (max-width: 1200px) {
+    .contenedor-inicio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tarjeta {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .texto-inicio {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar responsive */
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #8d8d8d;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        text-align: center;
+    }
+
+    .navbar-menu a {
+        padding: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background-color: #434141;
+    }
+
+    .navbar-logo {
+        margin-right: auto;
+    }
+
+    /* Botón de menú hamburguesa */
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #f5f5f5;
+    }
+
+    /* Sección de inicio */
+    .contenedor-inicio {
+        padding: 10px;
+    }
+
+    .tarjeta {
+        max-width: 100%;
+    }
+
+    .texto-inicio p {
+        font-size: 1.5em;
+    }
+
+    /* Sección "Sobre mí" */
+    .quien-soy {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .barras {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* Sección de proyectos */
+    .proyecto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .imagen-proyecto img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Formulario de contacto */
+    #formulario {
+        flex-direction: column;
+    }
+
+    #zona-izq {
+        border-radius: 12px 12px 0 0;
+    }
+
+    #zona-der {
+        border-radius: 0 0 12px 12px;
+    }
+
+    #primera-columna,
+    #segunda-columna,
+    #tercera-columna {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Ajustes para móviles pequeños */
+    .texto-inicio p {
+        font-size: 1.2em;
+    }
+
+    .navbar-logo img {
+        height: 80px;
+    }
+
+    #logo-tarjeta {
+        height: 25px;
+        width: 25px;
+    }
+
+    .social-icons img {
+        width: 25px;
+    }
 }
